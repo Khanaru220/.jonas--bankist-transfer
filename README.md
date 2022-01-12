@@ -1,7 +1,9 @@
 # exercise-Bankist--transfer
 Instructed project from Jonas's Udemy course -- related to array method, more fun things to do
 
-Those HTML + CSS files is pre-built by Jonas.
+Those HTML + CSS files is pre-built by Jonas. 
+
+Live-preview: https://bankist-transfer-hqtin-22.netlify.app/
 
 ---
 
