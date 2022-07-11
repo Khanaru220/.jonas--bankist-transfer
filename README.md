@@ -11,7 +11,7 @@ https://user-images.githubusercontent.com/74447462/149070671-6a93a60c-a833-4aac-
 - intro video + out-tro music - TechSmith
 - Mirror Mind by Bobby Richards - Yotube Studio
 - Files .html _ .css is prebuilt by Jonas
-- Live-preview: https://bankist-transfer-hqtin-22.netlify.app/
+- Live-preview: https://bankist-transfer-khanaru.netlify.app/
 > From:  Jonas's Udemy course:
 > https://www.udemy.com/course/web-projects-with-vanilla-javascript/
 
