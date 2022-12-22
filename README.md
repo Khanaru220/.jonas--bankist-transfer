@@ -1,15 +1,12 @@
 # Bankist Tranfer App 🧧
 
-
-✨Live site: <https://bankist-transfer-khanaru.netlify.app/>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3d976b54-d909-4978-a528-ef40baa029c6/deploy-status)](https://app.netlify.com/sites/bankist-transfer-khanaru/deploys)
-
 (*This is the longest video I made. Run out of music track* 🎞)
 
 https://user-images.githubusercontent.com/74447462/149070671-6a93a60c-a833-4aac-952d-7b65d001e670.mp4
 
+✨Live site: <https://bankist-transfer-khanaru.netlify.app/>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3d976b54-d909-4978-a528-ef40baa029c6/deploy-status)](https://app.netlify.com/sites/bankist-transfer-khanaru/deploys)
 
 ## Music, link credit:
 - intro video + out-tro music - TechSmith
