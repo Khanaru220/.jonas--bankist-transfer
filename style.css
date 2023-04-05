@@ -298,28 +298,31 @@ h2 {
 
 .tool-tip {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
   position: fixed;
-  font-size: 12px;
   right: 2px;
   bottom: 4px;
-  align-items: center;
-  gap: 10px;
   background-color: #f3f3f3;
+  font-size: 12px;
+}
+.wrap-button {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.tool-tip > a:nth-of-type(1) {
-  align-self: stretch;
-}
-
-.tool-tip > a:nth-of-type(1),
-.tool-tip > a:nth-of-type(2) {
+.wrap-button > .button-4 {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* Source: https://getcssscan.com/css-buttons-examples */
 /* button style StackOverFlow */
-.button-8 {
+.button-4 {
   background-color: #e1ecf4;
   border-radius: 3px;
   border: 1px solid #7aa7c7;
@@ -330,7 +333,6 @@ h2 {
   display: inline-block;
   font-family: -apple-system, system-ui, 'Segoe UI', 'Liberation Sans',
     sans-serif;
-  font-size: 12px;
   font-weight: 400;
   line-height: 1.15385;
   margin: 0;
@@ -346,27 +348,27 @@ h2 {
   white-space: nowrap;
 }
 
-.button-8--sub {
+.button-4--sub {
   background-color: #fbfbfb;
   border: 1px solid #999;
   color: #666;
 }
 
-.button-8:hover,
-.button-8:focus {
+.button-4:hover,
+.button-4:focus {
   background-color: #b3d3ea;
   color: #2c5777;
 }
-.button-8--sub:hover {
+.button-4--sub:hover {
   background-color: #ccc;
   color: #000;
 }
 
-.button-8:focus {
+.button-4:focus {
   box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
 }
 
-.button-8:active {
+.button-4:active {
   background-color: #a0c7e4;
   box-shadow: none;
   color: #2c5777;
