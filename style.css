@@ -295,3 +295,14 @@ h2 {
 .timer {
   font-weight: 600;
 }
+
+.tool-tip {
+  display: flex;
+  position: fixed;
+  font-size: 12px;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  gap: 10px;
+  background-color: #f3f3f3;
+}
