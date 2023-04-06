@@ -125,7 +125,7 @@ const logout = () => {
 
     if (fiveMin === 0) {
       clearInterval(count);
-      console.log(`Time out !!!`);
+      alert(`Time out !!!`);
       containerApp.style.opacity = 0;
       labelWelcome.textContent = 'Log in to get started';
     }
@@ -199,9 +199,7 @@ const calcDisplaySummary = function (account) {
     .map(deposit => (deposit * account.interestRate) / 100)
     .filter(deposit => deposit > 1)
     .reduce((acc, int) => acc + int, 0);
-  // console.log(interest);
 
-  // console.log(`income:${income}---outcome:${outcome}`);
   labelSumIn.textContent = formatNum(incomes, account);
   labelSumOut.textContent = formatNum(outcomes, account);
   labelSumInterest.textContent = formatNum(interest, account);
@@ -276,8 +274,8 @@ const login = function (username, pin) {
       inputLoginUsername.value = '';
       inputLoginPin.value = '';
       inputLoginPin.blur();
-    } else console.log('🔢 Wrong PIN');
-  } else console.log('😶 User not exist');
+    } else alert('🔢 Wrong PIN');
+  } else alert('😶 User not exist');
 };
 
 btnLogin.addEventListener('click', e => {
@@ -293,7 +291,7 @@ const transfer = function (username, amount) {
     if (accReceive !== currentAccount) {
       if (+amount > 0 && +amount <= currentAccount.balance) {
         // display success
-        console.log('🟢 Successed tranfer');
+        alert('🟢 Successed tranfer');
         // push movements to 2 acc
         accReceive.movements.push(+amount);
         currentAccount.movements.push(-amount);
@@ -306,9 +304,9 @@ const transfer = function (username, amount) {
         // reset field
         inputTransferTo.value = inputTransferAmount.value = '';
         inputTransferAmount.blur();
-      } else console.log('ERROR amount');
-    } else console.log('🤯 Same account');
-  } else console.log('😶 User not exist');
+      } else alert('ERROR amount');
+    } else alert('🤯 Same account');
+  } else alert('😶 User not exist');
 };
 
 btnTransfer.addEventListener('click', e => {
@@ -323,7 +321,7 @@ const closeAcc = function (username, pin) {
   if (tryAccount) {
     if (tryAccount.pin === +pin) {
       // success
-      console.log('🟢 Successed delete');
+      alert('⛔ Account removed');
       // BONUS: display UI +  bye mess if (same current acc)
       if (currentAccount === tryAccount) {
         containerApp.style.opacity = 0.1;
@@ -344,8 +342,8 @@ const closeAcc = function (username, pin) {
       // reset input field
       inputCloseUsername.value = inputClosePin.value = '';
       inputClosePin.blur();
-    } else console.log('🔢 Wrong PIN');
-  } else console.log('😶 User not exist');
+    } else alert('🔢 Wrong PIN');
+  } else alert('😶 User not exist');
 };
 
 btnClose.addEventListener('click', e => {
@@ -366,14 +364,14 @@ const loan = function (amount) {
         currentAccount.movementsDates.push(new Date().toISOString());
 
         updateUI(currentAccount);
-        console.log(`🟢 Successed loan`);
+        alert(`💲 Successed loan`);
       } else console.log(timeApprove);
       timeApprove--;
     }, 1000);
     inputLoanAmount.value = '';
     inputLoanAmount.blur();
     // reset input field
-  } else console.log(`Not enought requirement 🧧`);
+  } else alert(`Not enought requirement 🧧`);
 };
 
 btnLoan.addEventListener('click', e => {
