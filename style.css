@@ -304,9 +304,13 @@ h2 {
   position: fixed;
   right: 2px;
   bottom: 4px;
-  background-color: #f3f3f3;
   font-size: 12px;
 }
+
+.tool-tip__acount {
+  background-color: #f3f3f3;
+}
+
 .wrap-button {
   width: 80px;
   display: flex;

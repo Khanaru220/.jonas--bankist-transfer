@@ -9,68 +9,69 @@
 
 // DIFFERENT DATA! Contains movement dates, currency and locale
 
-const account1 = {
-  owner: 'Jonas Schmedtmann',
-  movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
-  interestRate: 1.2, // %
-  pin: 1111,
+const accounts = [
+  {
+    owner: 'Jonas Schmedtmann',
+    movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
+    interestRate: 1.2, // %
+    pin: 1111,
 
-  movementsDates: [
-    '2019-11-18T21:31:17.178Z',
+    movementsDates: [
+      '2019-11-18T21:31:17.178Z',
 
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2021-11-29T14:11:59.604Z',
-    '2021-12-10T17:01:17.194Z',
-    '2021-12-15T00:36:17.929Z',
-    // '2021-12-13T21:31:17.178Z',
-    '2021-12-16T00:00:36.790Z',
-  ],
-  currency: 'EUR',
-  locale: 'pt-PT', // de-DE
-};
+      '2019-12-23T07:42:02.383Z',
+      '2020-01-28T09:15:04.904Z',
+      '2020-04-01T10:17:24.185Z',
+      '2021-11-29T14:11:59.604Z',
+      '2021-12-10T17:01:17.194Z',
+      '2021-12-15T00:36:17.929Z',
+      // '2021-12-13T21:31:17.178Z',
+      '2021-12-16T00:00:36.790Z',
+    ],
+    currency: 'EUR',
+    locale: 'pt-PT', // de-DE
+  },
+  {
+    owner: 'True Home',
+    movements: [
+      5000000, 3400000, -1500000, -790000, -3210000, -1000000, 8500000, -300000,
+    ],
+    interestRate: 1.5,
+    pin: 2222,
 
-const account2 = {
-  owner: 'True Home',
-  movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
-  interestRate: 1.5,
-  pin: 2222,
+    movementsDates: [
+      '2019-11-01T13:15:33.035Z',
+      '2019-11-30T09:48:16.867Z',
+      '2019-12-25T06:04:23.907Z',
+      '2020-01-25T14:18:46.235Z',
+      '2020-02-05T16:33:06.386Z',
+      '2020-04-10T14:43:26.374Z',
+      '2020-06-25T18:49:59.371Z',
+      '2020-07-26T12:01:20.894Z',
+    ],
+    currency: 'VND',
+    locale: 'vi',
+  },
+  {
+    owner: 'John Doe',
+    movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+    interestRate: 1.5,
+    pin: 3333,
 
-  movementsDates: [
-    '2019-11-01T13:15:33.035Z',
-    '2019-11-30T09:48:16.867Z',
-    '2019-12-25T06:04:23.907Z',
-    '2020-01-25T14:18:46.235Z',
-    '2020-02-05T16:33:06.386Z',
-    '2020-04-10T14:43:26.374Z',
-    '2020-06-25T18:49:59.371Z',
-    '2020-07-26T12:01:20.894Z',
-  ],
-  currency: 'VND',
-  locale: 'vi',
-};
-const account3 = {
-  owner: 'John Doe',
-  movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
-  interestRate: 1.5,
-  pin: 3333,
-
-  movementsDates: [
-    '2021-01-25T14:18:46.235Z',
-    '2021-02-05T16:33:06.386Z',
-    '2021-04-10T14:43:26.374Z',
-    '2021-06-25T18:49:59.371Z',
-    '2021-07-26T12:01:20.894Z',
-    '2022-11-01T13:15:33.035Z',
-    '2022-11-02T10:48:16.867Z',
-    '2022-12-25T06:04:23.907Z',
-  ],
-  currency: 'USD',
-  locale: 'en-US',
-};
-
-const accounts = [account1, account2, account3];
+    movementsDates: [
+      '2021-01-25T14:18:46.235Z',
+      '2021-02-05T16:33:06.386Z',
+      '2021-04-10T14:43:26.374Z',
+      '2021-06-25T18:49:59.371Z',
+      '2021-07-26T12:01:20.894Z',
+      '2022-11-01T13:15:33.035Z',
+      '2022-11-02T10:48:16.867Z',
+      '2022-12-25T06:04:23.907Z',
+    ],
+    currency: 'USD',
+    locale: 'en-US',
+  },
+];
 
 /////////////////////////////////////////////////
 // Elements
@@ -354,23 +355,24 @@ btnClose.addEventListener('click', e => {
 
 // 8 function
 const loan = function (amount) {
+  let timeApproveLoan = 2; //secs
   // check condition deposit >= 10% request
   if (amount > 0 && currentAccount.movements.some(mov => mov >= 0.1 * amount)) {
     console.log(`😪 Approval waiting ...`);
-    let timeApprove = 1 * 3;
     const count = setInterval(() => {
-      if (timeApprove === 0) {
+      if (timeApproveLoan == 0) {
         clearInterval(count);
         currentAccount.movements.push(Math.floor(amount));
         currentAccount.movementsDates.push(new Date().toISOString());
+
         updateUI(currentAccount);
         console.log(`🟢 Successed loan`);
-      } else console.log(timeApprove);
-      timeApprove--;
+      } else console.log(timeApproveLoan);
+      timeApproveLoan--;
     }, 1000);
-    // reset input field
     inputLoanAmount.value = '';
     inputLoanAmount.blur();
+    // reset input field
   } else console.log(`Not enought requirement 🧧`);
 };
 
