@@ -355,20 +355,20 @@ btnClose.addEventListener('click', e => {
 
 // 8 function
 const loan = function (amount) {
-  let timeApproveLoan = 2; //secs
+  let timeApprove = 2; //secs
   // check condition deposit >= 10% request
   if (amount > 0 && currentAccount.movements.some(mov => mov >= 0.1 * amount)) {
     console.log(`😪 Approval waiting ...`);
     const count = setInterval(() => {
-      if (timeApproveLoan == 0) {
+      if (timeApprove === 0) {
         clearInterval(count);
         currentAccount.movements.push(Math.floor(amount));
         currentAccount.movementsDates.push(new Date().toISOString());
 
         updateUI(currentAccount);
         console.log(`🟢 Successed loan`);
-      } else console.log(timeApproveLoan);
-      timeApproveLoan--;
+      } else console.log(timeApprove);
+      timeApprove--;
     }, 1000);
     inputLoanAmount.value = '';
     inputLoanAmount.blur();
@@ -427,18 +427,4 @@ const displayClock = acc => {
   return dateCount;
 };
 
-// const day = `${date.getDate()}`.padStart(2, 0);
-// const month = `${date.getMonth() + 1}`.padStart(2, 0);
-// const year = date.getFullYear();
-// return [day, month, year].join('/');
-
 // --------------------------------
-
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// LECTURES
-
-// FAKE LOGGED IN
-// login('js', '1111');
-
-//
