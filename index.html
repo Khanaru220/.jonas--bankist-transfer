@@ -2,143 +2,143 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="shortcut icon" type="image/png" href="icon.png" />
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Bankist</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="shortcut icon" type="image/png" href="icon.png" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css" />
+	<title>Bankist</title>
 </head>
 
 <body>
-  <!-- TOP NAVIGATION -->
-  <nav>
-    <p class="welcome">Log in to get started</p>
-    <img src="logo.png" alt="Logo" class="logo" />
-    <form class="login">
-      <input type="text" placeholder="user" class="login__input login__input--user" />
-      <!-- In practice, use type="password" -->
-      <input type="text" placeholder="PIN" maxlength="4" class="login__input login__input--pin" />
-      <button class="login__btn">&rarr;</button>
-    </form>
-  </nav>
+	<!-- TOP NAVIGATION -->
+	<nav>
+		<p class="welcome">Log in to get started</p>
+		<img src="logo.png" alt="Logo" class="logo" />
+		<form class="login">
+			<input type="text" placeholder="user" class="login__input login__input--user" />
+			<!-- In practice, use type="password" -->
+			<input type="text" placeholder="PIN" maxlength="4" class="login__input login__input--pin" />
+			<button class="login__btn">&rarr;</button>
+		</form>
+	</nav>
 
-  <main class="app">
-    <!-- BALANCE -->
-    <div class="balance">
-      <div>
-        <p class="balance__label">Current balance</p>
-        <p class="balance__date">
-          As of <span class="date">05/03/2037</span>
-        </p>
-      </div>
-      <p class="balance__value">0000€</p>
-    </div>
+	<main class="app">
+		<!-- BALANCE -->
+		<div class="balance">
+			<div>
+				<p class="balance__label">Current balance</p>
+				<p class="balance__date">
+					As of <span class="date">05/03/2037</span>
+				</p>
+			</div>
+			<p class="balance__value">0000€</p>
+		</div>
 
-    <!-- MOVEMENTS -->
-    <div class="movements">
-      <div class="movements__row">
-        <div class="movements__type movements__type--deposit">2 deposit</div>
-        <div class="movements__date">3 days ago</div>
-        <div class="movements__value">4 000€</div>
-      </div>
-      <div class="movements__row">
-        <div class="movements__type movements__type--withdrawal">
-          1 withdrawal
-        </div>
-        <div class="movements__date">24/01/2037</div>
-        <div class="movements__value">-378€</div>
-      </div>
-    </div>
+		<!-- MOVEMENTS -->
+		<div class="movements">
+			<div class="movements__row">
+				<div class="movements__type movements__type--deposit">2 deposit</div>
+				<div class="movements__date">3 days ago</div>
+				<div class="movements__value">4 000€</div>
+			</div>
+			<div class="movements__row">
+				<div class="movements__type movements__type--withdrawal">
+					1 withdrawal
+				</div>
+				<div class="movements__date">24/01/2037</div>
+				<div class="movements__value">-378€</div>
+			</div>
+		</div>
 
-    <!-- SUMMARY -->
-    <div class="summary">
-      <p class="summary__label">In</p>
-      <p class="summary__value summary__value--in">0000€</p>
-      <p class="summary__label">Out</p>
-      <p class="summary__value summary__value--out">0000€</p>
-      <p class="summary__label">Interest</p>
-      <p class="summary__value summary__value--interest">0000€</p>
-      <button class="btn--sort">&downarrow; SORT</button>
-    </div>
+		<!-- SUMMARY -->
+		<div class="summary">
+			<p class="summary__label">In</p>
+			<p class="summary__value summary__value--in">0000€</p>
+			<p class="summary__label">Out</p>
+			<p class="summary__value summary__value--out">0000€</p>
+			<p class="summary__label">Interest</p>
+			<p class="summary__value summary__value--interest">0000€</p>
+			<button class="btn--sort">&downarrow; SORT</button>
+		</div>
 
-    <!-- OPERATION: TRANSFERS -->
-    <div class="operation operation--transfer">
-      <h2>Transfer money</h2>
-      <form class="form form--transfer">
-        <input type="text" class="form__input form__input--to" />
-        <input type="number" class="form__input form__input--amount" />
-        <button class="form__btn form__btn--transfer">&rarr;</button>
-        <label class="form__label">Transfer to #id</label>
-        <label class="form__label">Amount</label>
-      </form>
-    </div>
+		<!-- OPERATION: TRANSFERS -->
+		<div class="operation operation--transfer">
+			<h2>Transfer money</h2>
+			<form class="form form--transfer">
+				<input type="text" class="form__input form__input--to" />
+				<input type="number" class="form__input form__input--amount" />
+				<button class="form__btn form__btn--transfer">&rarr;</button>
+				<label class="form__label">Transfer to #id</label>
+				<label class="form__label">Amount</label>
+			</form>
+		</div>
 
-    <!-- OPERATION: LOAN -->
-    <div class="operation operation--loan">
-      <h2>Request loan</h2>
-      <form class="form form--loan">
-        <input type="number" class="form__input form__input--loan-amount" />
-        <button class="form__btn form__btn--loan">&rarr;</button>
-        <label class="form__label form__label--loan">Amount</label>
-      </form>
-    </div>
+		<!-- OPERATION: LOAN -->
+		<div class="operation operation--loan">
+			<h2>Request loan</h2>
+			<form class="form form--loan">
+				<input type="number" class="form__input form__input--loan-amount" />
+				<button class="form__btn form__btn--loan">&rarr;</button>
+				<label class="form__label form__label--loan">Amount</label>
+			</form>
+		</div>
 
-    <!-- OPERATION: CLOSE -->
-    <div class="operation operation--close">
-      <h2>Close account</h2>
-      <form class="form form--close">
-        <input type="text" class="form__input form__input--user" />
-        <input type="password" maxlength="6" class="form__input form__input--pin" />
-        <button class="form__btn form__btn--close">&rarr;</button>
-        <label class="form__label">Confirm user</label>
-        <label class="form__label">Confirm PIN</label>
-      </form>
-    </div>
+		<!-- OPERATION: CLOSE -->
+		<div class="operation operation--close">
+			<h2>Close account</h2>
+			<form class="form form--close">
+				<input type="text" class="form__input form__input--user" />
+				<input type="password" maxlength="6" class="form__input form__input--pin" />
+				<button class="form__btn form__btn--close">&rarr;</button>
+				<label class="form__label">Confirm user</label>
+				<label class="form__label">Confirm PIN</label>
+			</form>
+		</div>
 
-    <!-- LOGOUT TIMER -->
-    <p class="logout-timer">
-      You will be logged out in <span class="timer">05:00</span>
-    </p>
-  </main>
+		<!-- LOGOUT TIMER -->
+		<p class="logout-timer">
+			You will be logged out in <span class="timer">05:00</span>
+		</p>
+	</main>
 
-  <!-- <footer>
+	<!-- <footer>
       &copy; by Jonas Schmedtmann. Don't claim as your own :)
     </footer> -->
 
 
-  <!-- add after finish writing code, Guide toor> -->
-  <div class="tool-tip">
-    <div class="wrap-button">
-      <a href="https://user-images.githubusercontent.com/74447462/149070671-6a93a60c-a833-4aac-952d-7b65d001e670.mp4"
-        target="_blank" class="button-4">GUIDE CLIP</a>
-      <!-- Source icon Github: https://icons8.com -->
-      <a class="button-4 button-4--sub" href="https://github.com/Khanaru220/.jonas--bankist-transfer"><svg
-          xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
-          <path fill="#455A64"
-            d="M40.3,15.7c0.6-1.7,1.2-5-0.4-8.7c-4.5,0-8.3,3.2-8.9,3.8c-2.2-0.5-4.6-0.7-7-0.7c-2.5,0-4.9,0.3-7.2,0.8C13.7,7.7,9.6,7,8,7c0,0-0.9,1.8-0.9,5c0,2,0.5,3.2,0.8,3.8C5.5,18.3,4,21.7,4,26.1c0,11.2,7.1,15,20,15s20-3.8,20-15C44,21.5,42.6,18.1,40.3,15.7z">
-          </path>
-          <path fill="#FFCCBC"
-            d="M24,39c-8.2,0-15-1.4-15-9c0-2.9,1.6-4.5,2.7-5.5c2.5-2.2,6.7-1.2,12.3-1.2c4.1,0,7.6-0.7,10.4,0.2c2.8,0.9,4.6,3.5,4.6,6.3C39,37.7,35,39,24,39z">
-          </path>
-          <path fill="#D84315"
-            d="M25,34c0,0.6-0.4,1-1,1s-1-0.4-1-1s0.4-1,1-1S25,33.4,25,34z M26.5,36.5c0.2-0.2,0.2-0.5,0-0.7s-0.5-0.2-0.7,0c-0.9,0.9-2.6,0.9-3.5,0c-0.2-0.2-0.5-0.2-0.7,0s-0.2,0.5,0,0.7c0.7,0.7,1.5,1,2.5,1S25.8,37.1,26.5,36.5z">
-          </path>
-          <path fill="#FFF"
-            d="M19,29.5c0,2.5-1.3,4.5-3,4.5s-3-2-3-4.5s1.3-4.5,3-4.5S19,27,19,29.5z M32,25c-1.7,0-3,2-3,4.5s1.3,4.5,3,4.5c1.7,0,3-2,3-4.5S33.7,25,32,25z">
-          </path>
-          <path fill="#6D4C41"
-            d="M34,30c0,1.7-0.9,3-2,3s-2-1.3-2-3c0-0.2,0-0.5,0.1-0.7c0.1,0.4,0.5,0.7,0.9,0.7c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1c-0.2,0-0.4,0.1-0.6,0.2c0.4-0.7,0.9-1.2,1.6-1.2C33.1,27,34,28.3,34,30z M16,27c-0.7,0-1.2,0.5-1.6,1.2c0.2-0.1,0.4-0.2,0.6-0.2c0.6,0,1,0.4,1,1c0,0.6-0.4,1-1,1c-0.4,0-0.8-0.3-0.9-0.7c0,0.2-0.1,0.5-0.1,0.7c0,1.7,0.9,3,2,3s2-1.3,2-3S17.1,27,16,27z">
-          </path>
-        </svg><span>
-          &nbsp;GitHub
-        </span></a>
-    </div>
-    <span class="tool-tip__account"></span>
-  </div>
+	<!-- add after finish writing code, Guide toor> -->
+	<div class="tool-tip">
+		<div class="wrap-button">
+			<a href="https://user-images.githubusercontent.com/74447462/149070671-6a93a60c-a833-4aac-952d-7b65d001e670.mp4"
+				target="_blank" class="button-4">DEMO CLIP</a>
+			<!-- Source icon Github: https://icons8.com -->
+			<a class="button-4 button-4--sub" href="https://github.com/Khanaru220/.jonas--bankist-transfer"><svg
+					xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
+					<path fill="#455A64"
+						d="M40.3,15.7c0.6-1.7,1.2-5-0.4-8.7c-4.5,0-8.3,3.2-8.9,3.8c-2.2-0.5-4.6-0.7-7-0.7c-2.5,0-4.9,0.3-7.2,0.8C13.7,7.7,9.6,7,8,7c0,0-0.9,1.8-0.9,5c0,2,0.5,3.2,0.8,3.8C5.5,18.3,4,21.7,4,26.1c0,11.2,7.1,15,20,15s20-3.8,20-15C44,21.5,42.6,18.1,40.3,15.7z">
+					</path>
+					<path fill="#FFCCBC"
+						d="M24,39c-8.2,0-15-1.4-15-9c0-2.9,1.6-4.5,2.7-5.5c2.5-2.2,6.7-1.2,12.3-1.2c4.1,0,7.6-0.7,10.4,0.2c2.8,0.9,4.6,3.5,4.6,6.3C39,37.7,35,39,24,39z">
+					</path>
+					<path fill="#D84315"
+						d="M25,34c0,0.6-0.4,1-1,1s-1-0.4-1-1s0.4-1,1-1S25,33.4,25,34z M26.5,36.5c0.2-0.2,0.2-0.5,0-0.7s-0.5-0.2-0.7,0c-0.9,0.9-2.6,0.9-3.5,0c-0.2-0.2-0.5-0.2-0.7,0s-0.2,0.5,0,0.7c0.7,0.7,1.5,1,2.5,1S25.8,37.1,26.5,36.5z">
+					</path>
+					<path fill="#FFF"
+						d="M19,29.5c0,2.5-1.3,4.5-3,4.5s-3-2-3-4.5s1.3-4.5,3-4.5S19,27,19,29.5z M32,25c-1.7,0-3,2-3,4.5s1.3,4.5,3,4.5c1.7,0,3-2,3-4.5S33.7,25,32,25z">
+					</path>
+					<path fill="#6D4C41"
+						d="M34,30c0,1.7-0.9,3-2,3s-2-1.3-2-3c0-0.2,0-0.5,0.1-0.7c0.1,0.4,0.5,0.7,0.9,0.7c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1c-0.2,0-0.4,0.1-0.6,0.2c0.4-0.7,0.9-1.2,1.6-1.2C33.1,27,34,28.3,34,30z M16,27c-0.7,0-1.2,0.5-1.6,1.2c0.2-0.1,0.4-0.2,0.6-0.2c0.6,0,1,0.4,1,1c0,0.6-0.4,1-1,1c-0.4,0-0.8-0.3-0.9-0.7c0,0.2-0.1,0.5-0.1,0.7c0,1.7,0.9,3,2,3s2-1.3,2-3S17.1,27,16,27z">
+					</path>
+				</svg><span>
+					&nbsp;GitHub
+				</span></a>
+		</div>
+		<span class="tool-tip__account"></span>
+	</div>
 
-  <script src="script.js"></script>
+	<script src="script.js"></script>
 </body>
 
 </html>
